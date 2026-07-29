@@ -256,7 +256,7 @@ function escapeHtml(str) {
 
 /**
  * Função Auxiliar: Modelo de E-mail HTML Premium (Resend)
- * Estilo "Engenharia & Tecnologia" - Clean, Dark Tech Elements, High Contrast
+ * Estilo "Atendimento Exclusivo" - Header Escuro com Borda Dourada (#c5a85c), Tipografia Serif e Tabela de Resumo
  */
 function generateResendHtmlEmail({
   firstName,
@@ -272,147 +272,93 @@ function generateResendHtmlEmail({
   return `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confirmação de Contato - Rafael Franco</title>
+  <title>Recebemos seu planejamento de orçamento - Rafael Franco</title>
 </head>
-<body style="margin: 0; padding: 0; background-color: #0b0f17; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; color: #f1f5f9;">
-  
-  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #0b0f17; padding: 32px 16px;">
+<body style="margin: 0; padding: 0; background-color: #fcfcfc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #fcfcfc; padding: 24px 12px;">
     <tr>
       <td align="center">
-        
-        <!-- CARTÃO PRINCIPAL -->
-        <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 600px; background-color: #0f172a; border-radius: 16px; overflow: hidden; border: 1px solid #1e293b; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5), 0 8px 10px -6px rgba(0,0,0,0.5);">
+        <!-- Card Principal -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 600px; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 1px solid #f0f0f0;">
           
-          <!-- CABEÇALHO COM GRADIENTE & BORDAS DE ENGENHARIA -->
+          <!-- Cabeçalho Escuro Exclusivo -->
           <tr>
-            <td style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 36px 32px 28px 32px; border-top: 4px solid #3b82f6; text-align: left;">
-              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td>
-                    <div style="display: inline-block; background-color: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">
-                      ✦ Recebido com Sucesso
-                    </div>
-                    <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.3;">
-                      Olá, ${escapeHtml(firstName)}!
-                    </h1>
-                    <p style="margin: 8px 0 0 0; color: #94a3b8; font-size: 15px; line-height: 1.5;">
-                      Obrigado pelo contato. Recebi os detalhes do seu projeto e entrarei em contato em breve.
-                    </p>
-                  </td>
-                </tr>
-              </table>
+            <td style="background: linear-gradient(180deg, #1a1a1a 0%, #111111 100%); padding: 40px 35px 35px 35px; border-bottom: 4px solid #c5a85c;">
+              <p style="margin: 0 0 10px 0; color: #c5a85c; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;">Atendimento Exclusivo</p>
+              <h1 style="margin: 0; color: #ffffff; font-size: 30px; font-weight: 700; font-family: 'Georgia', serif; line-height: 1.2;">Olá, ${escapeHtml(firstName)}!</h1>
             </td>
           </tr>
 
-          <!-- CONTEÚDO PRINCIPAL -->
+          <!-- Corpo do Conteúdo -->
           <tr>
-            <td style="padding: 32px; background-color: #0f172a;">
+            <td style="padding: 35px;">
+              <p style="margin: 0 0 20px 0; color: #333333; font-size: 15px; line-height: 1.6;">
+                Agradecemos o seu contato. Recebemos o seu planejamento de orçamento enviado através do nosso canal oficial (<a href="https://francorafael.com" target="_blank" style="color: #0066cc; text-decoration: underline; font-weight: 600;">francorafael.com</a>).
+              </p>
+              <p style="margin: 0 0 30px 0; color: #333333; font-size: 15px; line-height: 1.6;">
+                Suas informações para o segmento de <strong style="font-weight: 700; color: #111111;">${escapeHtml(service)}</strong> já foram encaminhadas para a nossa mesa de análise. Nosso prazo estimado para o primeiro contato ou envio de proposta comercial é de até <strong style="font-weight: 700; color: #111111;">24 horas úteis</strong>.
+              </p>
+
+              <!-- Seção Título do Resumo -->
+              <h2 style="margin: 0 0 16px 0; color: #111111; font-size: 13px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; border-bottom: 1px solid #eaeaea; padding-bottom: 8px;">
+                Resumo dos Dados Recebidos
+              </h2>
               
-              <!-- BANNER DE WHATSAPP ACELERADO (BOTÃO DE DESTAQUE) -->
-              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: rgba(37, 211, 102, 0.08); border: 1px solid rgba(37, 211, 102, 0.25); border-radius: 12px; margin-bottom: 28px;">
+              <!-- Bloco de Informações Tratadas -->
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #fafafa; border-radius: 8px; border: 1px solid #f0f0f0; padding: 20px;">
                 <tr>
-                  <td style="padding: 20px; text-align: center;">
-                    <p style="margin: 0 0 12px 0; color: #e2e8f0; font-size: 14px; font-weight: 500;">
-                      🚀 Precisa de atendimento prioritário em tempo real?
-                    </p>
-                    <a href="${whatsappUrl}" target="_blank" style="display: inline-block; background-color: #25d366; color: #052e16; font-size: 15px; font-weight: 700; text-decoration: none; padding: 14px 28px; border-radius: 10px; box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.3); transition: all 0.2s ease;">
-                      Acelerar Atendimento via WhatsApp &rarr;
-                    </a>
+                  <td width="38%" valign="top" style="padding-bottom: 12px; color: #777777; font-size: 13px; font-weight: 600;">Segmento Escolhido:</td>
+                  <td width="62%" valign="top" style="padding-bottom: 12px; color: #111111; font-size: 14px; font-weight: 700;">${escapeHtml(service)}</td>
+                </tr>
+                <tr>
+                  <td valign="top" style="padding-bottom: 12px; color: #777777; font-size: 13px; font-weight: 600;">Empresa / Organização:</td>
+                  <td valign="top" style="padding-bottom: 12px; color: #111111; font-size: 14px; font-weight: 700;">${companyHtmlSpan}</td>
+                </tr>
+                <tr>
+                  <td valign="top" style="padding-bottom: 12px; color: #777777; font-size: 13px; font-weight: 600;">Orçamento Estimado:</td>
+                  <td valign="top" style="padding-bottom: 12px; color: #111111; font-size: 14px; font-weight: 700;">${escapeHtml(budget || "A combinar")}</td>
+                </tr>
+                <tr>
+                  <td valign="top" style="padding-bottom: 12px; color: #777777; font-size: 13px; font-weight: 600;">Telefone / WhatsApp:</td>
+                  <td valign="top" style="padding-bottom: 12px; color: #111111; font-size: 14px; font-weight: 600;">${escapeHtml(phone || "Não informado")}</td>
+                </tr>
+                <tr>
+                  <td valign="top" style="padding-bottom: 12px; color: #777777; font-size: 13px; font-weight: 600;">E-mail Cadastrado:</td>
+                  <td valign="top" style="padding-bottom: 12px; color: #111111; font-size: 14px; font-weight: 600;">${escapeHtml(email)}</td>
+                </tr>
+                <tr>
+                  <td valign="top" style="color: #777777; font-size: 13px; font-weight: 600;">Sua Mensagem:</td>
+                  <td valign="top" style="color: #444444; font-size: 14px; line-height: 1.5; font-style: italic;">
+                    "${escapeHtml(message || "Sem mensagem adicional.")}"
                   </td>
                 </tr>
               </table>
 
-              <!-- RESUMO DOS DADOS ENVIADOS -->
-              <div style="margin-bottom: 24px;">
-                <h3 style="margin: 0 0 16px 0; color: #38bdf8; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
-                  📌 Resumo da Solicitação
-                </h3>
-                
-                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #1e293b; border-radius: 10px; border: 1px solid #334155; border-collapse: separate;">
-                  <tr>
-                    <td width="35%" style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #94a3b8; font-size: 13px; font-weight: 600;">Nome Completo:</td>
-                    <td width="65%" style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #f8fafc; font-size: 14px; font-weight: 500;">${escapeHtml(cleanName)}</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #94a3b8; font-size: 13px; font-weight: 600;">Empresa:</td>
-                    <td style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #f8fafc; font-size: 14px; font-weight: 500;">${companyHtmlSpan}</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #94a3b8; font-size: 13px; font-weight: 600;">Serviço Requisitado:</td>
-                    <td style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #38bdf8; font-size: 14px; font-weight: 600;">${escapeHtml(service)}</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #94a3b8; font-size: 13px; font-weight: 600;">Orçamento Estimado:</td>
-                    <td style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #f8fafc; font-size: 14px; font-weight: 500;">${escapeHtml(budget)}</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #94a3b8; font-size: 13px; font-weight: 600;">E-mail:</td>
-                    <td style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #f8fafc; font-size: 14px; font-weight: 500;">${escapeHtml(email)}</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 12px 16px; color: #94a3b8; font-size: 13px; font-weight: 600;">Telefone / WhatsApp:</td>
-                    <td style="padding: 12px 16px; color: #f8fafc; font-size: 14px; font-weight: 500;">${escapeHtml(phone || "Não informado")}</td>
-                  </tr>
-                </table>
+              <!-- CTA para Atendimento Acelerado -->
+              <div style="margin-top: 30px; text-align: center;">
+                <p style="margin: 0 0 10px 0; color: #666666; font-size: 13px;">Deseja resposta imediata? Fale diretamente comigo:</p>
+                <a href="${whatsappUrl}" target="_blank" style="display: inline-block; background-color: #25d366; color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; padding: 13px 26px; border-radius: 6px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.25);">
+                  📲 Acelerar Atendimento via WhatsApp &rarr;
+                </a>
               </div>
-
-              ${message ? `
-              <!-- MENSAGEM DO CLIENTE -->
-              <div style="margin-bottom: 28px;">
-                <h3 style="margin: 0 0 10px 0; color: #94a3b8; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
-                  Sua Mensagem:
-                </h3>
-                <div style="background-color: #1a2333; border-left: 3px solid #3b82f6; border-radius: 0 8px 8px 0; padding: 14px 18px; color: #cbd5e1; font-size: 14px; line-height: 1.6; font-style: italic;">
-                  "${escapeHtml(message)}"
-                </div>
-              </div>
-              ` : ''}
-
-              <!-- SEÇÃO DE COMPROMISSO -->
-              <p style="margin: 0 0 24px 0; color: #cbd5e1; font-size: 14px; line-height: 1.6;">
-                Estou analisando as especificações técnicas da sua demanda. Caso tenha urgência ou queira acrescentar links ou documentos de apoio, você pode responder diretamente a este e-mail ou me chamar no WhatsApp.
-              </p>
-
-              <!-- ASSINATURA TECNOLÓGICA -->
-              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid #1e293b; padding-top: 24px;">
-                <tr>
-                  <td>
-                    <div style="color: #ffffff; font-size: 16px; font-weight: 700; letter-spacing: -0.2px;">
-                      Rafael Franco
-                    </div>
-                    <div style="color: #38bdf8; font-size: 13px; font-weight: 500; margin-top: 2px;">
-                      Desenvolvimento Web & Soluções de IA
-                    </div>
-                    <div style="margin-top: 8px;">
-                      <a href="https://francorafael.com" target="_blank" style="color: #94a3b8; font-size: 13px; text-decoration: none; font-weight: 500;">
-                        🌐 francorafael.com
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-
             </td>
           </tr>
 
-          <!-- RODAPÉ -->
+          <!-- Rodapé Técnico -->
           <tr>
-            <td style="background-color: #090d16; padding: 20px 32px; text-align: center; border-top: 1px solid #1e293b;">
-              <p style="margin: 0; color: #64748b; font-size: 12px; line-height: 1.5;">
-                Mensagem gerada automaticamente via Cloudflare Workers & Resend API.<br>
-                © ${new Date().getFullYear()} Rafael Franco. Todos os direitos reservados.
+            <td style="background-color: #fafafa; padding: 20px 35px; border-top: 1px solid #f0f0f0; text-align: center;">
+              <p style="margin: 0; color: #999999; font-size: 12px; line-height: 1.5;">
+                Este é um e-mail automático enviado pelo sistema de triagem de <strong>francorafael.com</strong>.<br>
+                Engenharia de Software & Soluções de IA — Rafael Franco.
               </p>
             </td>
           </tr>
-
         </table>
-
       </td>
     </tr>
   </table>
-
 </body>
 </html>`;
 }
