@@ -1,0 +1,20 @@
+name = "site-webhook-processor"
+main = "src/index.js"
+compatibility_date = "2024-09-25"
+compatibility_flags = [ "nodejs_compat" ]
+
+# Configuração de rotas de produção (Opcional - Configurar no dashboard Cloudflare)
+# routes = [
+#   { pattern = "api.francorafael.com/webhook", zone_name = "francorafael.com" }
+# ]
+
+# Variáveis não-sensíveis de ambiente (Observação: Chaves secretas devem ser registradas com `wrangler secret put`)
+[vars]
+EMAIL_FROM = "Rafael Franco <contato@francorafael.com>"
+ALLOWED_ORIGIN = "*"
+
+# Ambientes de staging / dev
+[env.staging]
+name = "site-webhook-processor-staging"
+[env.staging.vars]
+ALLOWED_ORIGIN = "https://staging.francorafael.com"

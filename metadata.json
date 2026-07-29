@@ -1,0 +1,6 @@
+{
+  "name": "Cloudflare Worker Webhook Processor",
+  "description": "Cloudflare Worker de processamento de formulários web, notificações Telegram, e-mails via Resend e botão WhatsApp acelerado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

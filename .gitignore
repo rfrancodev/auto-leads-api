@@ -1,0 +1,28 @@
+# Cloudflare Workers e segredos
+.env
+.env.local
+.env.*.local
+.dev.vars
+.wrangler/
+
+# Dependências
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compilação e Bundles
+dist/
+build/
+.cache/
+
+# Arquivos do Sistema Operacional e IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
