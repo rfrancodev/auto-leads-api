@@ -279,6 +279,6 @@ npx wrangler secret put RESEND_API_KEY --env=""
 
 ### 👤 Autor & Contato
 **Rafael Franco** - Engenheiro de Software & Especialista em Soluções Web & IA  
-- E-mail: `contato@francorafael.com`  
+- E-mail: `rfrancodev@gmail.com`  
 - Website: `https://francorafael.com`  
 - WhatsApp: `+55 (35) 99905-7566`
