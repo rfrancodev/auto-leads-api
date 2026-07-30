@@ -350,7 +350,7 @@ function generateResendHtmlEmail({
           <tr>
             <td style="background-color: #fafafa; padding: 20px 35px; border-top: 1px solid #f0f0f0; text-align: center;">
               <p style="margin: 0; color: #999999; font-size: 12px; line-height: 1.5;">
-                Este é um e-mail automático enviado pelo sistema de triagem de <strong>francorafael.com</strong>.<br>
+                Este é um e-mail automático enviado pelo sistema de <strong>francorafael.com</strong>.<br>
                 Engenharia de Software & Soluções de IA — Rafael Franco.
               </p>
             </td>
