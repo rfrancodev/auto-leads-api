@@ -187,7 +187,11 @@ export default {
             body: JSON.stringify({
               from: fromEmail,
               to: [email],
-              subject: `Recebi sua mensagem, ${firstName}! Projeto: ${service}`,
+              reply_to: "contato@francorafael.com",
+              headers: {
+                "List-Unsubscribe": "<mailto:contato@francorafael.com>"
+              },
+              subject: `Recebemos sua solicitação ✔`,
               html: htmlEmail
             })
           });
@@ -342,16 +346,26 @@ function generateResendHtmlEmail({
                 <a href="${whatsappUrl}" target="_blank" style="display: inline-block; background-color: #25d366; color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; padding: 13px 26px; border-radius: 6px; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.25);">
                   📲 Acelerar Atendimento via WhatsApp &rarr;
                 </a>
+                <p style="margin: 16px 0 0 0;">
+                  <a href="mailto:contato@francorafael.com" style="color: #0066cc; text-decoration: underline; font-size: 13px; font-weight: 600;">
+                    ✉️ Responder a este e-mail
+                  </a>
+                </p>
               </div>
             </td>
           </tr>
 
-          <!-- Rodapé Técnico -->
+          <!-- Rodapé com Informações de Contato e Endereço -->
           <tr>
-            <td style="background-color: #fafafa; padding: 20px 35px; border-top: 1px solid #f0f0f0; text-align: center;">
-              <p style="margin: 0; color: #999999; font-size: 12px; line-height: 1.5;">
-                Este é um e-mail automático enviado pelo sistema de <strong>francorafael.com</strong>.<br>
-                Engenharia de Software & Soluções de IA — Rafael Franco.
+            <td style="background-color: #fafafa; padding: 24px 35px; border-top: 1px solid #f0f0f0; text-align: center;">
+              <p style="margin: 0 0 6px 0; color: #333333; font-size: 13px; font-weight: 700;">
+                Rafael Franco — Engenharia de Software & Soluções de IA
+              </p>
+              <p style="margin: 0 0 8px 0; color: #666666; font-size: 12px;">
+                Passos - MG | <a href="mailto:contato@francorafael.com" style="color: #0066cc; text-decoration: none;">contato@francorafael.com</a> | <a href="https://francorafael.com" target="_blank" style="color: #0066cc; text-decoration: none;">francorafael.com</a>
+              </p>
+              <p style="margin: 0; color: #999999; font-size: 11px; line-height: 1.4;">
+                Este é um e-mail transacional referente à sua solicitação no site francorafael.com.
               </p>
             </td>
           </tr>
