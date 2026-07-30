@@ -108,7 +108,7 @@ export function generateEmailHtmlPreview(payload: WebhookPayload): string {
                 Agradecemos o seu contato. Recebemos o seu planejamento de orçamento enviado através do nosso canal oficial (<a href="https://francorafael.com" target="_blank" style="color: #0066cc; text-decoration: underline; font-weight: 600;">francorafael.com</a>).
               </p>
               <p style="margin: 0 0 30px 0; color: #333333; font-size: 15px; line-height: 1.6;">
-                Suas informações para o segmento de <strong style="font-weight: 700; color: #111111;">${escapeHtml(service)}</strong> já foram encaminhadas para a nossa mesa de análise. Nosso prazo estimado para o primeiro contato ou envio de proposta comercial é de até <strong style="font-weight: 700; color: #111111;">24 horas úteis</strong>.
+                Recebemos suas informações referentes ao segmento de <strong style="font-weight: 700; color: #111111;">${escapeHtml(service)}</strong> e nossa equipe entrará em contato o mais breve possível.
               </p>
 
               <!-- Seção Título do Resumo -->
